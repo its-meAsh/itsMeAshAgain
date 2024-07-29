@@ -1,0 +1,309 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: max-content;
+  background-color: var(--c1);
+  color: var(--c4);
+}
+
+ul {
+  list-style: none;
+}
+
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh;
+}
+
+#nameBig {
+  font-size: 300%;
+  padding: 0 4vh;
+}
+
+#navBar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  font-size: 120%;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+#navBar li {
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+#navBar li:hover {
+  text-shadow: 2.5vh 2.5vh 0.25vh var(--c2),-2.5vh -2.5vh 0.25vh var(--c2);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 3vh;
+  gap: 5vh;
+}
+
+#home {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  padding: 3vh 0;
+  gap: 0;
+}
+
+#greeting {
+  font-size: 150%;
+}
+
+#name {
+  font-size: 400%;
+}
+
+#origin {
+  font-size: 250%;
+}
+
+#r1s2 {
+  height: 70vh;
+}
+
+#r1s2 img {
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 10%)
+}
+
+.panelHeading {
+  transition: all 1s linear;
+  font-size: 225%;
+}
+
+.panelItems {
+  display: flex;
+  gap: 5vh;
+}
+
+#aboutMe .panelItems {
+  flex-direction: row-reverse;
+}
+
+#qoute {
+  font-size: 250%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh;
+  width: 125vw;
+  text-align: center;
+}
+
+#aboutMePara {
+  font-size: 120%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+#skills ul {
+  padding: 2vh;
+}
+
+.workBox {
+  background-color: var(--c3);
+  padding: 2vh;
+  border-radius: 0.25vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  transition: all 0.2s linear;
+  width: 100%
+}
+
+.workHeading {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#myProjects .panelItems{
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projectBox {
+  border: 0.25vh solid var(--c2);
+  border-radius: 0.25vh;
+  padding: 2vh;
+  width: 40vh;
+  text-align: center;
+  transition: all 0.2s linear;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.projectBox:hover {
+  transform: scale(1.1);
+}
+
+#myDocs .panelItems {
+  flex-direction: column;
+  gap: 2vh
+}
+
+.docBox {
+  border: 0.25vh solid var(--c2);
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding: 2vh;
+}
+
+.docHeading {
+  font-size: 110%;
+}
+.docBox{
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.docBox:hover{
+  transform: scale(0.9);
+}
+.docDesc {
+  font-size: 102.5%;
+}
+
+.workBox {
+  transition: all 0.2s linear;
+  transform-origin: right;
+}
+
+@keyframes hang {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fallAndJoin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  16% {
+    transform: rotate(-60deg);
+  }
+
+  32% {
+    transform: rotate(-30deg);
+  }
+
+  48% {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+
+  64% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+#redirect {
+  transition: all 0.2s linear;
+  cursor: pointer;
+  animation: none;
+  border: 0.5vh solid transparent;
+}
+
+@keyframes createBorders {
+  0% {
+    border-color: transparent;
+  }
+
+  16% {
+    border-bottom-color: var(--c2);
+  }
+
+  32% {
+    border-right-color: var(--c2);
+  }
+
+  48% {
+    border-top-color: var(--c2);
+  }
+
+  64% {
+    border-left-color: var(--c2);
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+@media (orientation: portrait) {
+  body{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+  
+  #navBar{
+    flex-direction: column;
+    gap: 4vh;
+  }
+  #navBar ul{
+    display: none;
+  }
+  #home{
+    flex-direction: column;
+  }
+  .panelItems{
+    flex-direction: column!important;
+  }
+  #r1s2{
+    height: 75vw;
+  }
+  #qoute{
+    width: 73vw;
+    padding: 5vw;
+  }
+  .projectBox{
+    width: 75vw;
+  }
+  .workBox{
+    width: 90%;
+  }
+  #r1s1{
+    font-size: 75%;
+  }
+}
