@@ -157,7 +157,7 @@ function resetGame() {
   winningComb;
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-      grid[i][j].style.backgroundColor = "#131316"
+      grid[i][j].style.backgroundColor = "#151818"
       grid[i][j].innerText = board[i][j]
     }
   }
